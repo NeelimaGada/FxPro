@@ -1,0 +1,26 @@
+
+<input type ="text"  [(ngModel)]="userID1">
+<button class= "btn btn-success" (click)= "getById()">Get User</button>
+<div class="container-fluid" *ngIf="showTable">
+    <div class="row">
+        <div class="col-12">
+            <h1>Displaying particular UserId Data</h1>
+            <table class="table table-bordered">
+                <tr>
+                    <th>id</th>
+                    <th>userId</th>
+                    <th>title</th>
+                    <th>body</th>
+                </tr>
+                <tr *ngFor="let data of userID">
+                    <td>{{data.id}}</td>
+                    <td>{{data.userId}}</td>
+                    <td>{{data.title}}</td>
+                    <td>{{data.body}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
